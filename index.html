@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estilo Global Co | Asistente virtual</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Conversaciones">
+    <div class="brand"><span class="logo">EG</span><strong>Estilo Global Co</strong></div>
+    <button class="new" id="newChat" type="button">+ Nuevo chat</button>
+    <nav class="history" id="history"></nav>
+    <div class="keybox">
+      <label for="apiKey">Clave de OpenRouter</label>
+      <input id="apiKey" type="password" placeholder="sk-or-..." autocomplete="off">
+      <button id="saveKey" type="button">Guardar clave</button>
+      <small id="keyState">Sin clave guardada</small>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <main class="main empty" id="main">
+    <header class="top">
+      <button class="icon" id="menu" type="button" aria-label="Abrir menú">☰</button>
+      <strong>Estilo Global Co</strong>
+    </header>
+    <section class="chat" id="chat" aria-live="polite"></section>
+    <div class="stage">
+      <h1 class="hello"><span class="logo">EG</span>¡Hola! ¿Qué estilo buscas hoy?</h1>
+      <form class="composer" id="form">
+        <textarea id="input" rows="1" placeholder="Escribe tu mensaje a Estilo Global Co" aria-label="Mensaje"></textarea>
+        <div class="bar">
+          <div class="pills">
+            <button type="button" class="pill">Ver novedades</button>
+            <button type="button" class="pill">Ayuda con mi talla</button>
+          </div>
+          <button class="send" id="send" type="submit" disabled aria-label="Enviar">↑</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
